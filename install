@@ -169,11 +169,11 @@ fi
 touch /var/lib/misc/udhcpd.leases
 
 echo "Initialising access point"
-service hostapd start
+sudo systemctl hostapd 
 update-rc.d hostapd enable
 
 echo "Initialising DHCP server"
-service udhcpd start
+sudo systemctl start  udhcpd 
 update-rc.d udhcpd enable
 
 
